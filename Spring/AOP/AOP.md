@@ -23,10 +23,11 @@
 ### AOP 용어
 
 - Aspect : 관점, 관심사. 자바 프로그래밍에서 cross-cutting 문제가 자주 발생하는 개념들
-- cross-cutting concern : 횡단 관심사. 여러 부분에서 같은 관심사를 사용하는 것. 공통 기능(<-> core concern : 메인 로직)
+- cross-cutting concern(ccc) : 횡단 관심사. 여러 부분에서 같은 관심사를 사용하는 것. 공통 기능(<-> core concern(cc) : 메인 로직)
 - Join point : 각 메서드 사이의 지점들. 스프링에서는 메서드를 실행할때를 말함
 - Pointcut : Join point에 Advice를 끼워넣는 것. AspectJ 표현식이 일치하는 pointcut의 Advice를 실행함
 - Advice : 끼워넣을 로직. Around, Before, After등의 타입 존재
+- Advisor : Advice와 Pointcut을 하나로 묶어 다루는 것
 - Target : Advice가 적용될 객체
 - Weaving : 관점을 삽입시키는 행위. Spring AOP는 Run-time Weaving만 가능
 - Proxy : 기존 메서드를 래핑하는것. Spring AOP는 기본적으로 JDK dynamic proxy를 사용
@@ -139,6 +140,7 @@ public class CustomLogger {
 // AspectJAdviceParameterNameDiscoverer.java
 // AspectJExpressionPointcut.java
 
+// ParserContext -> #{}
 // InternalSpelExpressionParser.java
 // Tokenizer.java
 // TokenKind.java
